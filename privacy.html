@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Canada Green Button Visualizer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-bottom: 2rem;
+      transition: color 0.15s;
+    }
+    .back:hover { color: #94a3b8; }
+
+    header {
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    header .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #4db98a;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta {
+      font-size: 0.82rem;
+      color: #475569;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      padding: 1.25rem 1.5rem;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 0.92rem;
+      color: #94a3b8;
+      margin-bottom: 0.75rem;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    li {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+    li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: #475569;
+    }
+
+    a {
+      color: #67e8f9;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    strong { color: #cbd5e1; font-weight: 600; }
+
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.82rem;
+      background: rgba(148, 163, 184, 0.1);
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      color: #e2e8f0;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.1);
+      text-align: center;
+      font-size: 0.78rem;
+      color: #334155;
+    }
+    footer a { color: #475569; }
+    footer a:hover { color: #64748b; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a href="/" class="back">← Back to app</a>
+
+    <header>
+      <div class="label">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: June 2025</p>
+    </header>
+
+    <section>
+      <h2>Your data stays on your device</h2>
+      <p>
+        All Green Button XML files you upload are parsed entirely within your browser using client-side JavaScript.
+        No file content is ever transmitted to any server operated by this application.
+      </p>
+    </section>
+
+    <section>
+      <h2>Google Drive (optional)</h2>
+      <p>
+        If you choose to connect a Google account, parsed data is saved exclusively to your own Google Drive
+        <strong>appDataFolder</strong> — a private, app-specific storage space that only this application can access.
+        No other person, application, or service can read or write to that folder.
+      </p>
+      <p>
+        We request only the <code>drive.appdata</code>, <code>drive.readonly</code>, and
+        <code>userinfo.profile</code> OAuth scopes. We never read, write, or list any file outside the appDataFolder.
+        You can revoke access at any time via
+        <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account Permissions</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Weather data</h2>
+      <p>
+        When you enable the temperature overlay, the service address associated with your utility data is geocoded
+        to coordinates using <strong>Nominatim</strong> (operated by the OpenStreetMap Foundation). Only the derived
+        latitude/longitude — not your name, account number, or full address — is then sent to <strong>NASA POWER</strong>
+        or <strong>Open-Meteo</strong> to fetch historical daily temperatures.
+      </p>
+      <p>
+        Geocoded coordinates are cached in <code>localStorage</code> so subsequent loads do not re-contact Nominatim.
+      </p>
+    </section>
+
+    <section>
+      <h2>Local storage</h2>
+      <p>
+        Parsed billing data, rate profiles, app settings, and weather cache are stored in your browser's
+        <code>localStorage</code>. This data never leaves your device unless you have connected Google Drive.
+        Clearing your browser data removes it permanently.
+      </p>
+    </section>
+
+    <section>
+      <h2>No analytics or tracking</h2>
+      <p>
+        This application does not use cookies, analytics services, advertising networks, or third-party tracking scripts.
+        The only external script loaded is the Google Identity Services library
+        (<code>accounts.google.com/gsi/client</code>), which is required for optional Drive sign-in.
+      </p>
+    </section>
+
+    <section>
+      <h2>Third-party services</h2>
+      <ul>
+        <li>
+          <strong>Google OAuth / Drive</strong> —
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+        </li>
+        <li>
+          <strong>Nominatim (OpenStreetMap Foundation)</strong> —
+          <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OSM Privacy Policy</a>
+        </li>
+        <li>
+          <strong>NASA POWER</strong> — operated by NASA; coordinates are submitted but no personal data is collected
+        </li>
+        <li>
+          <strong>Open-Meteo</strong> —
+          <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteo Terms &amp; Privacy</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy can be directed to
+        <a href="mailto:tuantran1708@gmail.com">tuantran1708@gmail.com</a>.
+      </p>
+    </section>
+
+    <footer>
+      <a href="/">Canada Green Button Visualizer</a> &nbsp;·&nbsp;
+      <a href="/terms.html">Terms of Service</a>
+    </footer>
+  </div>
+</body>
+</html>
